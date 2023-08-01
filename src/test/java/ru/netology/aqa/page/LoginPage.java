@@ -34,11 +34,6 @@ public class LoginPage {
         notificationContent.shouldHave(text("Повторный вход возможен через 30 минут"));
     }
 
-    public void loginWithOtherInvalidPassword(String code) {
-        passwordField.sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.DELETE);
-        passwordField.setValue(code);
-        loginButton.click();
-    }
     public void cleanLoginFields() {
         loginField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
         passwordField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
